@@ -54,10 +54,12 @@ section {
 
 .catalogo {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 900px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
     margin: auto;
+    padding: 20px;
+}
 }
 .card {
     background: linear-gradient(180deg, #1b1b1b 0%, #111111 100%);
@@ -89,6 +91,9 @@ section {
     height: 240px;
     object-fit: contain;
     margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .comprar {
     display: inline-block;
@@ -133,7 +138,11 @@ footer {
 
 <section>
 
-<h2>Catálogo RLD</h2>
+<h2>✨ Nossos Perfumes</h2>
+
+<p style="color:#bdbdbd; margin-top:-10px; margin-bottom:35px;">
+Escolha sua fragrância favorita e faça seu pedido pelo WhatsApp.
+</p>
 
 <div class="catalogo">
 
