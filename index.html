@@ -6,252 +6,494 @@
 
 <title>RLD Fragrances</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b0b0b;
-    color: white;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-header {
-    text-align: center;
-    padding: 40px 20px;
-    background: #111;
+body{
+font-family:'Poppins',sans-serif;
+background:#0b0b0b;
+color:#fff;
 }
 
-h1 {
-    font-size: 42px;
-    letter-spacing: 3px;
-    margin: 0;
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(10,10,10,.95);
+backdrop-filter:blur(10px);
+border-bottom:1px solid #222;
 }
 
-h2 {
-    color: #d4af37;
-    font-size: 30px;
+nav .container{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px;
 }
 
-p {
-    font-size: 18px;
+.logo{
+font-size:28px;
+font-weight:700;
+color:#d4af37;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 25px;
-    background: #d4af37;
-    color: black;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
 }
 
-section {
-    padding: 30px 20px;
-    text-align: center;
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
 }
 
-.catalogo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 28px;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-.card {
-    background: linear-gradient(180deg, #1b1b1b 0%, #111111 100%);
-    padding: 22px;
-    border-radius: 18px;
-    border: 1px solid #2b2b2b;
-    box-shadow: 0 8px 20px rgba(0,0,0,.35);
-    transition: transform .25s ease, box-shadow .25s ease;
+nav a:hover{
+color:#d4af37;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 28px rgba(212,175,55,.25);
+header{
+text-align:center;
+padding-bottom:60px;
+background:#111;
 }
 
-.card strong {
-    display: block;
-    color: #d4af37;
-    font-size: 24px;
-    margin: 18px 0;
-    font-weight: bold;
+.banner{
+width:100%;
+max-width:1200px;
+display:block;
+margin:auto;
 }
 
-
-
-.card img {
-    width: 100%;
-    max-width: 180px;
-    height: 240px;
-    object-fit: contain;
-    margin-bottom: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.comprar {
-    display: inline-block;
-    background: #25D366;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: .25s;
+.hero{
+padding:50px 20px;
 }
 
-.comprar:hover {
-    background: #1ea952;
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
 }
 
-@media(max-width:600px){
-
-.catalogo {
-    grid-template-columns: 1fr;
+.hero p{
+font-size:18px;
+color:#cfcfcf;
+max-width:700px;
+margin:auto;
+line-height:1.8;
 }
 
+.botao{
+display:inline-block;
+margin-top:35px;
+padding:16px 30px;
+background:#d4af37;
+color:#000;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-    color: #aaa;
+.botao:hover{
+transform:scale(1.05);
+}
+
+.beneficios{
+max-width:1200px;
+margin:50px auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:0 20px;
+}
+
+.beneficio{
+background:#171717;
+padding:20px;
+border-radius:16px;
+border:1px solid #2a2a2a;
+}
+
+section{
+padding:70px 20px;
+}
+
+.titulo{
+text-align:center;
+font-size:38px;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.subtitulo{
+text-align:center;
+color:#bdbdbd;
+margin-bottom:50px;
+}
+
+.catalogo{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#171717;
+border-radius:18px;
+padding:25px;
+text-align:center;
+border:1px solid #2a2a2a;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(212,175,55,.18);
+}
+
+.card img{
+width:180px;
+height:240px;
+object-fit:contain;
+display:block;
+margin:auto;
+}
+
+.card h3{
+margin-top:20px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#cfcfcf;
+min-height:55px;
+}
+
+.preco{
+font-size:28px;
+color:#d4af37;
+font-weight:700;
+margin:20px 0;
+}
+
+.comprar{
+display:inline-block;
+padding:14px 24px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+@media(max-width:768px){
+
+nav .container{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.beneficios{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
-<img src="imagens/banner-rld.JPG" alt="Banner RLD Fragrances" style="width:100%; max-width:1000px; border-radius:18px; margin-bottom:25px;">
+<nav>
+
+<div class="container">
+
+<div class="logo">
+RLD Fragrances
+</div>
+
+<ul>
+
+<li><a href="#inicio">Início</a></li>
+<li><a href="#perfumes">Perfumes</a></li>
+<li><a href="#vantagens">Vantagens</a></li>
+<li><a href="https://wa.me/5511965675005">WhatsApp</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<header id="inicio">
+
+<img class="banner" src="imagens/banner-rld.JPG">
+
+<div class="hero">
+
+<h1>Fragrâncias que marcam presença.</h1>
+
+<p>
+Perfumes importados selecionados para quem busca elegância,
+personalidade e qualidade.
+</p>
+
+<a class="botao"
+href="https://wa.me/5511965675005">
+Comprar pelo WhatsApp
+</a>
+
+</div>
+<div class="beneficios">
+
+<div class="beneficio">
+<h3>⭐ 100% Original</h3>
+<p>Perfumes importados selecionados com qualidade.</p>
+</div>
+
+<div class="beneficio">
+<h3>🚚 Envio para todo o Brasil</h3>
+<p>Entrega rápida e segura para qualquer região.</p>
+</div>
+
+<div class="beneficio">
+<h3>🔒 Compra Segura</h3>
+<p>Atendimento personalizado pelo WhatsApp.</p>
+</div>
+
+</div>
+
 </header>
 
+<section id="perfumes">
 
-<section>
+<h2 class="titulo">Nossos Perfumes</h2>
 
-<h2>✨ Nossos Perfumes</h2>
-
-<p style="color:#bdbdbd; margin-top:-10px; margin-bottom:35px;">
-Escolha sua fragrância favorita e faça seu pedido pelo WhatsApp.
+<p class="subtitulo">
+Escolha sua fragrância favorita e faça seu pedido.
 </p>
 
 <div class="catalogo">
 
-
 <div class="card">
+
 <img src="imagens/khamrah.jpg">
+
 <h3>Khamrah EDP - Lattafa</h3>
+
 <p>Perfume sofisticado, doce e marcante.</p>
-<strong>R$ 229,90</strong>
-<a class="comprar" href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Khamrah%20EDP%20-%20Lattafa%20que%20vi%20no%20site%20da%20RLD%20Fragrances.">Comprar</a>
+
+<div class="preco">
+R$ 229,90
 </div>
 
+<a class="comprar"
+href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Khamrah%20EDP%20-%20Lattafa.">
+Comprar
+</a>
+
+</div>
 
 <div class="card">
+
 <img src="imagens/yara.jpg">
+
 <h3>Yara Rosa - Lattafa</h3>
+
 <p>Fragrância feminina, elegante e envolvente.</p>
-<strong>R$ 229,90</strong>
-<a class="comprar" href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Yara%20Rosa%20-%20Lattafa%20que%20vi%20no%20site%20da%20RLD%20Fragrances.%20Gostaria%20de%20mais%20informações.">Comprar</a>
+
+<div class="preco">
+R$ 229,90
 </div>
 
+<a class="comprar"
+href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Yara%20Rosa%20-%20Lattafa.">
+Comprar
+</a>
+
+</div>
 
 <div class="card">
+
 <img src="imagens/honor-glory.jpg">
-<h3>Bade'e Al Oud Honor & Glory - Lattafa</h3>
-<p>Luxuoso e com presença intensa.</p>
-<strong>R$ 219,90</strong>
-<a class="comprar" href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Bade'e%20Al%20Oud%20Honor%20%26%20Glory%20-%20Lattafa%20que%20vi%20no%20site%20da%20RLD%20Fragrances.%20Gostaria%20de%20mais%20informações.">Comprar</a>
+
+<h3>Honor & Glory - Lattafa</h3>
+
+<p>Luxuoso, intenso e inesquecível.</p>
+
+<div class="preco">
+R$ 219,90
 </div>
 
+<a class="comprar"
+href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Honor%20%26%20Glory%20-%20Lattafa.">
+Comprar
+</a>
 
+</div>
 <div class="card">
+
 <img src="imagens/fakhar-black.jpg">
+
 <h3>Fakhar Black - Lattafa</h3>
-<p>Elegância e sofisticação.</p>
-<strong>R$ 279,90</strong>
-<a class="comprar" href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Fakhar%20Black%20-%20Lattafa%20que%20vi%20no%20site%20da%20RLD%20Fragrances.%20Gostaria%20de%20mais%20informações.">Comprar</a>
+
+<p>Elegância e sofisticação para qualquer ocasião.</p>
+
+<div class="preco">
+R$ 279,90
 </div>
 
+<a class="comprar"
+href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Fakhar%20Black%20-%20Lattafa.">
+Comprar
+</a>
+
+</div>
 
 <div class="card">
+
 <img src="imagens/club-de-nuit.jpg">
+
 <h3>Club de Nuit Intense - Armaf</h3>
-<p>Clássico, forte e marcante.</p>
-<strong>R$ 319,90</strong>
-<a class="comprar" href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Club%20de%20Nuit%20Intense%20-%20Armaf%20que%20vi%20no%20site%20da%20RLD%20Fragrances.%20Gostaria%20de%20mais%20informações.">Comprar</a>
+
+<p>Clássico, intenso e de grande projeção.</p>
+
+<div class="preco">
+R$ 319,90
 </div>
 
+<a class="comprar"
+href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Club%20de%20Nuit%20Intense%20-%20Armaf.">
+Comprar
+</a>
+
+</div>
 
 <div class="card">
+
 <img src="imagens/asad.jpg">
+
 <h3>Asad - Lattafa</h3>
-<p>Fragrância intensa e sofisticada.</p>
-<strong>R$ 259,90</strong>
-<a class="comprar" href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Asad%20-%20Lattafa%20que%20vi%20no%20site%20da%20RLD%20Fragrances.%20Gostaria%20de%20mais%20informações.">Comprar</a>
+
+<p>Fragrância intensa, moderna e sofisticada.</p>
+
+<div class="preco">
+R$ 259,90
 </div>
 
+<a class="comprar"
+href="https://wa.me/5511965675005?text=Olá!%20Tenho%20interesse%20no%20perfume%20Asad%20-%20Lattafa.">
+Comprar
+</a>
+
+</div>
 
 </div>
 
 </section>
 
-<section style="padding:50px 20px; background:#111;">
+<section id="vantagens">
 
-<h2>Por que comprar na RLD Fragrances?</h2>
+<h2 class="titulo">Por que comprar na RLD?</h2>
 
 <div class="catalogo">
 
 <div class="card">
-<h3>✅ 100% Original</h3>
-<p>Trabalhamos apenas com perfumes originais e de alta qualidade.</p>
+<h3>✅ Perfumes Originais</h3>
+<p>Selecionamos fragrâncias importadas com qualidade e procedência.</p>
 </div>
 
 <div class="card">
 <h3>🚚 Envio para todo o Brasil</h3>
-<p>Entrega rápida e segura para qualquer região do país.</p>
+<p>Seu pedido é preparado com cuidado e enviado com segurança.</p>
+</div>
+
+<div class="card">
+<h3>💬 Atendimento Personalizado</h3>
+<p>Tiramos suas dúvidas e ajudamos na escolha da fragrância ideal.</p>
 </div>
 
 <div class="card">
 <h3>🔒 Compra Segura</h3>
-<p>Atendimento personalizado pelo WhatsApp e pagamento protegido.</p>
-</div>
-
-<div class="card">
-<h3>⭐ Atendimento Premium</h3>
-<p>Estamos prontos para indicar a melhor fragrância para você.</p>
+<p>Atendimento direto pelo WhatsApp com suporte durante a compra.</p>
 </div>
 
 </div>
 
 </section>
-<footer style="background:#0b0b0b;padding:40px 20px;text-align:center;border-top:1px solid #222;">
+<footer style="background:#111;border-top:1px solid #222;padding:50px 20px;text-align:center;">
 
-<h3 style="color:#d4af37;">RLD Fragrances</h3>
+<h2 style="color:#d4af37;margin-bottom:15px;">
+RLD Fragrances
+</h2>
 
-<p>Perfumes importados selecionados com qualidade e elegância.</p>
-
-<p>
-📱 WhatsApp:
-<a href="https://wa.me/5511965675005" style="color:#25D366;text-decoration:none;">
-(11) 96567-5005
-</a>
+<p style="max-width:600px;margin:auto;color:#cfcfcf;line-height:1.8;">
+Perfumes importados selecionados para quem busca elegância, qualidade e personalidade.
 </p>
 
-<p style="font-size:14px;color:#888;">
+<p style="margin-top:25px;">
+
+<a href="https://wa.me/5511965675005"
+style="color:#25D366;text-decoration:none;font-weight:bold;font-size:20px;">
+
+📱 (11) 96567-5005
+
+</a>
+
+</p>
+
+<p style="margin-top:30px;color:#777;font-size:14px;">
 © 2026 RLD Fragrances. Todos os direitos reservados.
 </p>
 
 </footer>
 
+<a href="https://wa.me/5511965675005?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20perfumes%20da%20RLD%20Fragrances."
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+z-index:999;
+">
+💬
+</a>
 
 </body>
-</html>
+</html>    
