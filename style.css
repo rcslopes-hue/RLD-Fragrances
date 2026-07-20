@@ -53,8 +53,10 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:100px 20px;
-    background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75));
+    padding:120px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.88)),
+        radial-gradient(circle at top,#3a2d08 0%,#0d0d0d 60%);
 }
 
 .hero h2{
@@ -74,17 +76,19 @@ nav a:hover{
     margin-bottom:40px;
 }
 .botao{
-    background:#d4af37;
-    color:#000;
-    padding:15px 35px;
-    border-radius:30px;
+    background:linear-gradient(135deg,#d4af37,#f3d36b);
+    color:#111;
+    padding:18px 40px;
+    border-radius:35px;
     text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
+    font-weight:700;
+    font-size:18px;
+    box-shadow:0 10px 25px rgba(212,175,55,.30);
+    transition:.35s;
 }
-
 .botao:hover{
-    transform:scale(1.05);
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 15px 35px rgba(212,175,55,.45);
 }
 
 .catalogo{
