@@ -115,6 +115,24 @@ nav a:hover{
     transition:all .35s ease;
     box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
+.selo{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:linear-gradient(135deg,#d4af37,#f5d76e);
+    color:#111;
+    font-size:12px;
+    font-weight:bold;
+    padding:8px 12px;
+    border-radius:20px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    box-shadow:0 5px 15px rgba(212,175,55,.35);
+}
+
+.mais-vendido{
+    background:linear-gradient(135deg,#ffb300,#ffd54f);
+}
 .produto:hover{
     transform:translateY(-10px);
     border-color:#d4af37;
