@@ -58,18 +58,21 @@ nav a:hover{
 }
 
 .hero h2{
-    font-size:50px;
+    font-size:58px;
     color:#d4af37;
-    margin-bottom:20px;
+    font-weight:700;
+    line-height:1.2;
+    max-width:900px;
+    margin-bottom:25px;
 }
 
 .hero p{
-    max-width:700px;
-    font-size:20px;
-    color:#ddd;
-    margin-bottom:35px;
+    max-width:760px;
+    font-size:21px;
+    color:#e5e5e5;
+    line-height:1.8;
+    margin-bottom:40px;
 }
-
 .botao{
     background:#d4af37;
     color:#000;
