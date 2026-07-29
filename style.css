@@ -204,3 +204,72 @@ section h2{
 
 }
 ``
+.hero{
+    background:url("imagens/banner.jpg") center center/cover no-repeat;
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.hero-conteudo{
+    position:relative;
+    z-index:2;
+    max-width:600px;
+}
+
+.hero h1{
+    font-size:64px;
+    line-height:1.1;
+    margin-bottom:20px;
+    color:white;
+}
+
+.hero p{
+    font-size:22px;
+    color:#f2f2f2;
+    margin-bottom:35px;
+}
+
+.botoes{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.botao-secundario{
+    padding:16px 35px;
+    border:2px solid #d4af37;
+    color:#d4af37;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.botao-secundario:hover{
+    background:#d4af37;
+    color:black;
+}
+
+@media(max-width:768px){
+
+.hero{
+    background-position:center;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+}
