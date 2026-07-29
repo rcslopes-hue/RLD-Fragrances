@@ -1,213 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLD Fragrances | Perfumes Árabes Originais</title>
+    <!-- Fontes Oficiais do Projeto -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Estilos Inline Base (Pode ser movido para um style.css) -->
+    <style>
+        :root {
+            --preto-fosco: #090909;
+            --dourado: #D4AF37;
+            --branco: #FFFFFF;
+        }
 
-<meta charset="UTF-8">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        body {
+            background-color: var(--preto-fosco);
+            color: var(--branco);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
 
-<title>RLD Fragrances | Perfumes Árabes Originais</title>
+        h1, h2, h3, .font-title {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
 
-<link rel="stylesheet" href="style.css">
+        /* 1. Header Fixo com Efeito Blur */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(9, 9, 9, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dourado);
+            text-decoration: none;
+        }
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        nav a:hover {
+            color: var(--dourado);
+        }
 
+        /* 2. Hero Section */
+        .hero {
+            min-height: 100vh;
+            padding: 120px 8% 60px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            /* Simulação do efeito de fumaça dourada no fundo */
+            background: radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.08) 0%, rgba(9, 9, 9, 1) 70%);
+        }
+
+        .hero-content {
+            max-width: 550px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--branco);
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            color: #b3b3b3;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .btn-gold {
+            background-color: var(--dourado);
+            color: var(--preto-fosco);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--branco);
+            color: var(--branco);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--branco);
+            color: var(--preto-fosco);
+            transform: translateY(-2px);
+        }
+
+        .hero-images {
+            width: 45%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .perfume-placeholder {
+            background: linear-gradient(145deg, #151515, #0a0a0a);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            aspect-ratio: 3/4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(212, 175, 55, 0.4);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 4px;
+        }
+
+        /* Botão Flutuante WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 968px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 140px;
+            }
+            .hero-content {
+                margin-bottom: 50px;
+            }
+            .btn-group {
+                justify-content: center;
+            }
+            .hero-images {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-
-<div class="logo">
-
-RLD <span>Fragrances</span>
-
-</div>
-
-<nav>
-
-<a href="#inicio">Início</a>
-
-<a href="#catalogo">Catálogo</a>
-
-<a href="#sobre">Sobre</a>
-
-<a href="#contato">Contato</a>
-
-</nav>
-
-</header>
-
-<section id="inicio" class="hero">
-
-<img src="imagens/banner-rld.JPG" alt="Banner RLD Fragrances">
-
-</section>
-
-<section id="catalogo">
-
-<h2>
-
-Perfumes em Destaque
-
-</h2>
-
-<div class="produtos">
-
-<div class="produto">
-
-<img src="imagens/asad.jpg" alt="Asad">
-
-<h3>Asad</h3>
-
-<p>Lattafa</p>
-
-<a href="https://wa.me/5511926630903?text=Olá! Tenho interesse no perfume Asad.">
-Comprar pelo WhatsApp
-</a>
-
-</div>
-
-<div class="produto">
-
-<img src="imagens/khamrah.jpg" alt="Khamrah">
-
-<h3>Khamrah</h3>
-
-<p>Lattafa</p>
-
-<a href="https://wa.me/5511926630903?text=Olá! Tenho interesse no perfume Khamrah.">
-Comprar pelo WhatsApp
-</a>
-
-</div>
-
-<div class="produto">
-
-<img src="imagens/yara.jpg" alt="Yara">
-
-<h3>Yara</h3>
-
-<p>Lattafa</p>
-
-<a href="https://wa.me/5511926630903?text=Olá! Tenho interesse no perfume Yara.">
-Comprar pelo WhatsApp
-</a>
-
-</div>
-
-<div class="produto">
-
-<img src="imagens/honor-glory.jpg" alt="Honor & Glory">
-
-<h3>Honor & Glory</h3>
-
-<p>Lattafa</p>
-
-<a href="https://wa.me/5511926630903?text=Olá! Tenho interesse no perfume Honor & Glory.">
-Comprar pelo WhatsApp
-</a>
-
-</div>
-
-<div class="produto">
-
-<img src="imagens/fakhar-black.jpg" alt="Fakhar Black">
-
-<h3>Fakhar Black</h3>
-
-<p>Lattafa</p>
-
-<a href="https://wa.me/5511926630903?text=Olá! Tenho interesse no perfume Fakhar Black.">
-Comprar pelo WhatsApp
-</a>
-
-</div>
-
-<div class="produto">
-
-<img src="imagens/club-de-nuit.jpg" alt="Club de Nuit">
-
-<h3>Club de Nuit Intense</h3>
-
-<p>Armaf</p>
-
-<a href="https://wa.me/5511926630903?text=Olá! Tenho interesse no perfume Club de Nuit Intense.">
-Comprar pelo WhatsApp
-</a>
-
-</div>
-
-</div>
-</section>
-
-<section id="sobre">
-
-<h2>
-
-Por que escolher a RLD?
-
-</h2>
-
-<div class="beneficios">
-
-<div>
-
-<h3>100% Originais</h3>
-
-<p>Produtos com procedência garantida.</p>
-
-</div>
-
-<div>
-
-<h3>Envio Nacional</h3>
-
-<p>Entregamos para todo o Brasil.</p>
-
-</div>
-
-<div>
-
-<h3>Atendimento Exclusivo</h3>
-
-<p>Suporte personalizado pelo WhatsApp.</p>
-
-</div>
-
-<div>
-
-<h3>Compra Segura</h3>
-
-<p>Confiança do início ao fim da compra.</p>
-
-</div>
-
-</div>
-
-</section>
-
-<footer id="contato">
-
-<h2>RLD Fragrances</h2>
-
-<p>Perfumes árabes originais.</p>
-
-<a href="https://wa.me/5511926630903">
-
-Falar no WhatsApp
-
-</a>
-
-</footer>
-
-<script src="script.js"></script>
+    <!-- 1. Header -->
+    <header>
+        <a href="#" class="logo">RLD FRAGRANCES</a>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elegância que deixa sua marca.</h1>
+            <p>Perfumes árabes originais cuidadosamente selecionados para quem busca exclusividade e sofisticação.</p>
+            <div class="btn-group">
+                <a href="#catalogo" class="btn btn-gold">Ver Catálogo</a>
+                <a href="https://wa.me" target="_blank" class="btn btn-outline">WhatsApp</a>
+            </div>
+        </div>
+        <div class="hero-images">
+            <div class="perfume-placeholder">Asad</div>
+            <div class="perfume-placeholder">Khamrah</div>
+            <div class="perfume-placeholder">Honor & Glory</div>
+            <div class="perfume-placeholder">Club de Nuit</div>
+        </div>
+    </section>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me" class="whatsapp-float" target="_blank" aria-label="Contato via WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="#FFF"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-3.507c1.56.927 3.491 1.417 5.454 1.418 5.511 0 9.997-4.482 10.001-9.999.002-2.673-1.04-5.184-2.935-7.082C17.224 2.932 14.71 1.887 12.01 1.887c-5.51 0-9.993 4.482-9.997 10c-.001 1.916.498 3.793 1.448 5.416L2.486 21.5l4.161-1.007z"/></svg>
+    </a>
 
 </body>
-
 </html>
