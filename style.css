@@ -205,7 +205,7 @@ section h2{
 }
 ``
 .hero{
-    background:url("imagens/banner.jpg") center center/cover no-repeat;
+    background:url("imagens/banner.JPG") center center/cover no-repeat;
     min-height:100vh;
     position:relative;
     display:flex;
