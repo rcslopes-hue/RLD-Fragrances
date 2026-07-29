@@ -1,1 +1,337 @@
+:root {
+  --preto: #090909;
+  --dourado: #D4AF37;
+  --branco: #FFFFFF;
+}
 
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+body { 
+  background: var(--preto); 
+  color: var(--branco); 
+  font-family: 'Poppins', sans-serif; 
+}
+
+/* HEADER */
+header {
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000;
+  background: rgba(9,9,9,0.7); 
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212,175,55,0.2);
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px 5%;
+  transition: 0.3s;
+}
+
+header .logo { 
+  font-family: 'Cinzel', serif; 
+  font-size: 1.8rem; 
+  color: var(--dourado); 
+  font-weight: 700; 
+  letter-spacing: 2px;
+}
+
+nav a { 
+  color: var(--branco); 
+  text-decoration: none; 
+  margin-left: 30px; 
+  font-weight: 400; 
+  transition: 0.3s; 
+  position: relative;
+}
+
+nav a:hover { 
+  color: var(--dourado); 
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: var(--dourado);
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  padding: 0 5%;
+  background: linear-gradient(rgba(9,9,9,0.85), rgba(9,9,9,0.85)), url('img/banner-rld.JPG') center/cover no-repeat;
+  position: relative;
+}
+
+.hero-text { 
+  width: 55%; 
+  z-index: 2; 
+  animation: fadeInLeft 1s ease;
+}
+
+.hero-text h1 { 
+  font-family: 'Cinzel', serif; 
+  font-size: 3rem; 
+  color: var(--dourado); 
+  margin-bottom: 20px; 
+  line-height: 1.2;
+}
+
+.hero-text p { 
+  font-size: 1.1rem; 
+  margin-bottom: 30px; 
+  line-height: 1.6; 
+  color: #ccc;
+}
+
+.btn { 
+  background: var(--dourado); 
+  color: var(--preto); 
+  padding: 14px 30px; 
+  border-radius: 4px; 
+  text-decoration: none; 
+  font-weight: 600; 
+  margin-right: 15px; 
+  transition: 0.3s; 
+  display: inline-block;
+  border: 2px solid var(--dourado);
+}
+
+.btn:hover { 
+  box-shadow: 0 0 20px var(--dourado); 
+  transform: translateY(-3px); 
+}
+
+.btn-outline { 
+  background: transparent; 
+  color: var(--dourado); 
+}
+
+.btn-outline:hover {
+  background: var(--dourado);
+  color: var(--preto);
+}
+
+/* SEÇÕES */
+section { 
+  padding: 100px 5%; 
+}
+
+section h2 { 
+  font-family: 'Cinzel', serif; 
+  text-align: center; 
+  font-size: 2.5rem; 
+  color: var(--dourado); 
+  margin-bottom: 60px; 
+}
+
+/* BENEFÍCIOS */
+.grid-4 { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 30px; 
+}
+
+.card-beneficio { 
+  background: #111; 
+  padding: 30px; 
+  border: 1px solid #222; 
+  border-radius: 8px; 
+  text-align: center; 
+  transition: 0.4s; 
+}
+
+.card-beneficio:hover { 
+  border-color: var(--dourado); 
+  transform: translateY(-8px); 
+  box-shadow: 0 10px 30px rgba(212,175,55,0.1);
+}
+
+.card-beneficio .icon { 
+  font-size: 2.5rem; 
+  color: var(--dourado); 
+  margin-bottom: 15px; 
+}
+
+.card-beneficio h3 { 
+  font-family: 'Cinzel', serif; 
+  color: var(--dourado); 
+  margin-bottom: 10px; 
+  font-size: 1.2rem;
+}
+
+/* CATÁLOGO */
+.grid-produtos { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 40px; 
+}
+
+.card-produto { 
+  background: #111; 
+  border: 1px solid #222; 
+  border-radius: 10px; 
+  padding: 20px; 
+  transition: 0.4s;
+  animation: fadeInUp 0.6s ease;
+}
+
+.card-produto:hover { 
+  border-color: var(--dourado); 
+  transform: translateY(-5px);
+}
+
+.card-produto img { 
+  width: 100%; 
+  height: 300px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  margin-bottom: 15px; 
+}
+
+.card-produto h3 { 
+  font-family: 'Cinzel', serif; 
+  color: var(--dourado); 
+  font-size: 1.4rem; 
+}
+
+.card-produto .marca { 
+  font-size: 0.9rem; 
+  color: #aaa; 
+  margin-bottom: 10px; 
+}
+
+.card-produto .info { 
+  font-size: 0.9rem; 
+  margin: 5px 0; 
+  color: #ccc;
+}
+
+.btn-wpp { 
+  background: #25D366; 
+  color: #fff; 
+  width: 100%; 
+  text-align: center; 
+  padding: 12px; 
+  margin-top: 15px; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  display: block; 
+  font-weight: 600; 
+  transition: 0.3s;
+}
+
+.btn-wpp:hover { 
+  background: #1ebe57; 
+  transform: scale(1.02);
+}
+
+/* EXCLUSIVIDADE E DEPOIMENTOS */
+.exclusividade { 
+  background: #111; 
+  text-align: center; 
+}
+
+.depoimentos { 
+  background: #0f0f0f; 
+}
+
+.card-depoimento { 
+  background: #111; 
+  padding: 25px; 
+  border-left: 3px solid var(--dourado); 
+  margin-bottom: 20px; 
+  border-radius: 5px;
+}
+
+/* WHATSAPP FLUTUANTE */
+.wpp-float { 
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  background: #25D366; 
+  width: 60px; 
+  height: 60px; 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 2rem; 
+  color: #fff; 
+  text-decoration: none; 
+  box-shadow: 0 0 20px rgba(37,211,102,0.5); 
+  z-index: 999; 
+  transition: 0.3s;
+}
+
+.wpp-float:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+footer { 
+  background: #000; 
+  padding: 40px 5%; 
+  text-align: center; 
+  border-top: 1px solid #222; 
+}
+
+footer .logo { 
+  font-family: 'Cinzel', serif; 
+  color: var(--dourado); 
+  font-size: 1.5rem; 
+  margin-bottom: 15px; 
+  letter-spacing: 2px;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVO */
+@media(max-width: 900px) {
+  .hero { 
+    text-align: center; 
+    padding-top: 120px; 
+  }
+  .hero-text { 
+    width: 100%; 
+  }
+  .hero-text h1 { 
+    font-size: 2.2rem; 
+  }
+  nav a { 
+    margin-left: 15px; 
+    font-size: 0.9rem; 
+  }
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
