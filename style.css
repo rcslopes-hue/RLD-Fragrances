@@ -14,6 +14,8 @@ body{
     color:#ffffff;
 }
 
+/* ================= HEADER ================= */
+
 header{
     position:fixed;
     top:0;
@@ -23,8 +25,8 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,.75);
-    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(10px);
     z-index:1000;
 }
 
@@ -36,7 +38,7 @@ header{
 }
 
 .logo span{
-    color:#fff;
+    color:white;
 }
 
 nav{
@@ -45,231 +47,316 @@ nav{
 }
 
 nav a{
-    color:#fff;
+    color:white;
     text-decoration:none;
-    transition:.3s;
     font-weight:500;
+    transition:.3s;
 }
 
 nav a:hover{
     color:#d4af37;
 }
 
+/* ================= BANNER ================= */
+
 .hero{
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("imagens/banner-rld.JPG");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
     min-height:100vh;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
-    padding:120px 20px 80px;
-    background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75));
+
+    padding:120px 20px;
+
 }
 
 .hero-conteudo{
-    max-width:850px;
+
+    max-width:700px;
+
 }
 
 .hero h1{
+
     font-family:'Cinzel',serif;
-    font-size:54px;
-    color:#d4af37;
-    margin-bottom:25px;
+
+    font-size:60px;
+
+    color:white;
+
+    margin-bottom:20px;
+
 }
 
 .hero p{
-    font-size:20px;
-    color:#ddd;
-    margin-bottom:40px;
+
+    font-size:21px;
+
+    color:#f1f1f1;
+
+    margin-bottom:35px;
+
+    line-height:1.6;
+
+}
+
+.botoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
 }
 
 .botao{
-    display:inline-block;
-    padding:16px 42px;
+
     background:#d4af37;
-    color:#000;
+
+    color:black;
+
     text-decoration:none;
-    border-radius:50px;
+
+    padding:16px 38px;
+
+    border-radius:40px;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
 
 .botao:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 25px rgba(212,175,55,.45);
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 20px rgba(212,175,55,.5);
+
 }
 
+.botao-secundario{
+
+    border:2px solid #d4af37;
+
+    color:#d4af37;
+
+    text-decoration:none;
+
+    padding:16px 38px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+}
+
+.botao-secundario:hover{
+
+    background:#d4af37;
+
+    color:black;
+
+}
+
+/* ================= SEÇÕES ================= */
+
 section{
+
     padding:90px 8%;
+
 }
 
 section h2{
-    text-align:center;
-    color:#d4af37;
-    font-size:38px;
-    margin-bottom:30px;
+
     font-family:'Cinzel',serif;
+
+    color:#d4af37;
+
+    font-size:38px;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
 }
 
 .sobre p{
+
     max-width:850px;
+
     margin:auto;
+
     text-align:center;
-    color:#ccc;
+
     line-height:1.8;
-    font-size:18px;
+
+    color:#cccccc;
+
 }
 
+/* ================= CATÁLOGO ================= */
+
 .produtos{
+
     display:grid;
+
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
     gap:30px;
-    margin-top:50px;
+
+    margin-top:40px;
+
 }
 
 .produto{
-    background:#151515;
+
+    background:#161616;
+
     border:1px solid rgba(212,175,55,.25);
-    border-radius:18px;
+
+    border-radius:20px;
+
     overflow:hidden;
+
     transition:.3s;
+
 }
 
 .produto:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 25px rgba(212,175,55,.25);
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 20px rgba(212,175,55,.25);
+
 }
 
 .produto img{
+
     width:100%;
+
     height:320px;
+
     object-fit:cover;
+
 }
 
 .produto h3{
-    text-align:center;
-    padding:18px;
+
     color:#d4af37;
+
+    text-align:center;
+
+    padding:20px;
+
 }
 
+/* ================= RODAPÉ ================= */
+
 footer{
-    padding:50px 20px;
-    background:#000;
+
+    background:black;
+
     text-align:center;
+
+    padding:50px 20px;
+
 }
 
 footer h2{
+
     color:#d4af37;
+
     margin-bottom:15px;
+
 }
 
 footer p{
-    color:#bbb;
-    margin-bottom:20px;
+
+    color:#bbbbbb;
+
+    margin-bottom:25px;
+
 }
 
 footer a{
+
     display:inline-block;
+
     background:#25D366;
-    color:#fff;
+
+    color:white;
+
     text-decoration:none;
-    padding:14px 32px;
-    border-radius:50px;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
     font-weight:bold;
+
 }
+
+/* ================= RESPONSIVO ================= */
 
 @media(max-width:768px){
 
 header{
+
     flex-direction:column;
+
     gap:15px;
+
 }
 
 nav{
-    gap:18px;
+
     flex-wrap:wrap;
+
     justify-content:center;
+
+    gap:15px;
+
 }
 
 .hero h1{
-    font-size:36px;
+
+    font-size:40px;
+
 }
 
 .hero p{
-    font-size:17px;
-}
 
-section h2{
-    font-size:30px;
-}
+    font-size:18px;
 
-}
-``
-.hero{
-    background:url("imagens/banner-rld.JPG") center center/cover no-repeat;
-    min-height:100vh;
-    position:relative;
-    display:flex;
-    align-items:center;
-    padding:0 8%;
-}
-
-.hero-overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.45);
-}
-
-.hero-conteudo{
-    position:relative;
-    z-index:2;
-    max-width:600px;
-}
-
-.hero h1{
-    font-size:64px;
-    line-height:1.1;
-    margin-bottom:20px;
-    color:white;
-}
-
-.hero p{
-    font-size:22px;
-    color:#f2f2f2;
-    margin-bottom:35px;
 }
 
 .botoes{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+
+    flex-direction:column;
+
+    align-items:center;
+
 }
 
-.botao-secundario{
-    padding:16px 35px;
-    border:2px solid #d4af37;
-    color:#d4af37;
-    text-decoration:none;
-    border-radius:50px;
-    transition:.3s;
-}
+section h2{
 
-.botao-secundario:hover{
-    background:#d4af37;
-    color:black;
-}
+    font-size:30px;
 
-@media(max-width:768px){
-
-.hero{
-    background-position:center;
-}
-
-.hero h1{
-    font-size:42px;
-}
-
-.hero p{
-    font-size:18px;
 }
 
 }
