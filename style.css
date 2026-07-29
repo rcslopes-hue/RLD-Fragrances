@@ -718,3 +718,18 @@ footer .container{
 .faq-item{
     animation:aparecer .8s ease;
 }
+nav.ativo{
+    display:block;
+    position:absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    background:#111;
+    padding:20px;
+}
+
+nav.ativo ul{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
