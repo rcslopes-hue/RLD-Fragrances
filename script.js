@@ -59,12 +59,4 @@ document.querySelectorAll('.btn-wpp').forEach(button => {
   });
 });
 
-// FECHAR MENU MOBILE AO CLICAR
-const navLinks = document.querySelectorAll('nav a');
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    // Se tiver menu mobile depois, fecha aqui
-  });
-});
-
 console.log('RLD Fragrances - Site carregado com sucesso');
