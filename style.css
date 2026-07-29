@@ -10,35 +10,35 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#090909;
-    color:#ffffff;
+    background:#0a0a0a;
+    color:#fff;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    padding:20px 8%;
+    padding:18px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,.65);
-    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(12px);
     z-index:1000;
 }
 
 .logo{
     font-family:'Cinzel',serif;
-    font-size:30px;
-    font-weight:700;
+    font-size:32px;
     color:#d4af37;
+    font-weight:700;
 }
 
 .logo span{
-    color:white;
+    color:#ffffff;
 }
 
 nav{
@@ -47,316 +47,131 @@ nav{
 }
 
 nav a{
-    color:white;
+    color:#ffffff;
     text-decoration:none;
-    font-weight:500;
     transition:.3s;
+    font-weight:500;
 }
 
 nav a:hover{
     color:#d4af37;
 }
 
-/* ================= BANNER ================= */
+/* HERO */
 
 .hero{
-
-    background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("imagens/banner-rld.JPG");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    min-height:100vh;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
-    padding:120px 20px;
-
+    width:100%;
+    margin-top:80px;
 }
 
-.hero-conteudo{
-
-    max-width:700px;
-
+.hero img{
+    display:block;
+    width:100%;
+    height:auto;
 }
 
-.hero h1{
-
-    font-family:'Cinzel',serif;
-
-    font-size:60px;
-
-    color:white;
-
-    margin-bottom:20px;
-
-}
-
-.hero p{
-
-    font-size:21px;
-
-    color:#f1f1f1;
-
-    margin-bottom:35px;
-
-    line-height:1.6;
-
-}
-
-.botoes{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-}
-
-.botao{
-
-    background:#d4af37;
-
-    color:black;
-
-    text-decoration:none;
-
-    padding:16px 38px;
-
-    border-radius:40px;
-
-    font-weight:bold;
-
-    transition:.3s;
-
-}
-
-.botao:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 0 20px rgba(212,175,55,.5);
-
-}
-
-.botao-secundario{
-
-    border:2px solid #d4af37;
-
-    color:#d4af37;
-
-    text-decoration:none;
-
-    padding:16px 38px;
-
-    border-radius:40px;
-
-    transition:.3s;
-
-}
-
-.botao-secundario:hover{
-
-    background:#d4af37;
-
-    color:black;
-
-}
-
-/* ================= SEÇÕES ================= */
+/* SEÇÕES */
 
 section{
-
-    padding:90px 8%;
-
+    padding:80px 8%;
 }
 
 section h2{
-
+    text-align:center;
+    margin-bottom:40px;
     font-family:'Cinzel',serif;
-
+    font-size:40px;
     color:#d4af37;
-
-    font-size:38px;
-
-    text-align:center;
-
-    margin-bottom:30px;
-
 }
 
-.sobre p{
-
-    max-width:850px;
-
-    margin:auto;
-
-    text-align:center;
-
-    line-height:1.8;
-
-    color:#cccccc;
-
-}
-
-/* ================= CATÁLOGO ================= */
+/* CATÁLOGO */
 
 .produtos{
-
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
     gap:30px;
-
-    margin-top:40px;
-
 }
 
-.produto{
+/* BENEFÍCIOS */
 
-    background:#161616;
-
-    border:1px solid rgba(212,175,55,.25);
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    transition:.3s;
-
+.beneficios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
 }
 
-.produto:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 0 20px rgba(212,175,55,.25);
-
-}
-
-.produto img{
-
-    width:100%;
-
-    height:320px;
-
-    object-fit:cover;
-
-}
-
-.produto h3{
-
-    color:#d4af37;
-
+.beneficios div{
+    background:#151515;
+    border:1px solid rgba(212,175,55,.2);
+    border-radius:18px;
+    padding:30px;
     text-align:center;
-
-    padding:20px;
-
+    transition:.3s;
 }
 
-/* ================= RODAPÉ ================= */
+.beneficios div:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
+}
+
+.beneficios h3{
+    color:#d4af37;
+    margin-bottom:12px;
+}
+
+/* RODAPÉ */
 
 footer{
-
-    background:black;
-
-    text-align:center;
-
+    background:#000;
     padding:50px 20px;
-
+    text-align:center;
 }
 
 footer h2{
-
     color:#d4af37;
-
-    margin-bottom:15px;
-
+    margin-bottom:10px;
 }
 
 footer p{
-
-    color:#bbbbbb;
-
     margin-bottom:25px;
-
+    color:#cccccc;
 }
 
 footer a{
-
     display:inline-block;
-
-    background:#25D366;
-
-    color:white;
-
-    text-decoration:none;
-
     padding:15px 35px;
-
+    background:#25D366;
+    color:white;
+    text-decoration:none;
     border-radius:40px;
-
     font-weight:bold;
-
 }
 
-/* ================= RESPONSIVO ================= */
+/* CELULAR */
 
 @media(max-width:768px){
 
 header{
-
     flex-direction:column;
-
     gap:15px;
-
 }
 
 nav{
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
     gap:15px;
-
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
-.hero h1{
-
-    font-size:40px;
-
-}
-
-.hero p{
-
-    font-size:18px;
-
-}
-
-.botoes{
-
-    flex-direction:column;
-
-    align-items:center;
-
+.logo{
+    font-size:28px;
 }
 
 section h2{
-
     font-size:30px;
+}
 
+.hero{
+    margin-top:120px;
 }
 
 }
